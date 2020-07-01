@@ -1,0 +1,27 @@
+.rank-panel {
+    position: relative;
+    padding: 30px;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+
+    .badge {
+        font-size: 20px;
+        font-weight: bold;
+        height: 35px;
+        left: -40px;
+        line-height: 35px;
+        position: absolute;
+        text-align:center;
+        top: 20px;
+        transform: rotate(-45deg);
+        width: 155px;
+        border: 1px solid #e7e7e7;
+        color: #333;
+    }
+
+    .container {
+        display: flex;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+}

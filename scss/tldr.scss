@@ -1,0 +1,31 @@
+.tldr {
+    border: 4px solid #e60000;
+    border-radius: 15px;
+
+    .title {
+        border-bottom: 1px solid #e60000;
+        border-top: none;
+        padding: 3px;
+        font-size: 2rem;
+    }
+
+    .content {
+        li {
+            list-style: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                transform: rotate(45deg);
+                height: 24px;
+                width: 12px;
+                margin-right: 10px;
+                border-bottom: 7px solid #78b13f;
+                border-right: 7px solid #78b13f;
+            }
+        }
+
+    }
+}

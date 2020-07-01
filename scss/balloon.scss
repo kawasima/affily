@@ -1,0 +1,64 @@
+$balloon-background-color: $scheme-main !default;
+
+.balloon-message {
+    margin-bottom: 2rem;
+    flex-direction: row;
+    display: flex;
+
+    &.left {
+        .text:before {
+            left: -20px;
+            border-right: 10px solid rgba(0,0,0,.2);
+        }
+        .text:after {
+            left: -18px;
+            border-right: 10px solid #fff;
+        }
+    }
+
+    &.right {
+        .text:before {
+            right: -20px;
+            border-left: 10px solid rgba(0,0,0,.2);
+        }
+        .text:after {
+            right: -18px;
+            border-left: 10px solid #fff;
+        }
+        .avatar {
+            margin-left: 20px;
+            order: 2;
+        }
+    }
+    .avatar {
+        position: relative;
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+    }
+    .avatar.right {
+        float: right;
+    }
+    .text {
+        position: relative;
+        border-radius: 5px;
+        padding: 20px 30px;
+        width: auto;
+        margin-left: 20px;
+        border: 1px solid rgba(0,0,0,0.2);
+    }
+    .text:before {
+        content: "";
+        position:absolute;
+        top: 50%;
+        margin-top: -10px;
+        border: 10px solid transparent;
+    }
+    .text:after {
+        border: 10px solid transparent;
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+    }
+}

@@ -1,0 +1,14 @@
+.highlighter {
+    font-weight: bold;
+    margin: 0 0.1em;
+    padding: 0.1em 0.2em;
+    backgroud: #fcfc60 !important;
+    background: linear-gradient(to bottom, transparent 60%, rgba(255,153,255,1) 60%) !important;
+
+    &.green {
+        background: linear-gradient(to bottom, transparent 60%, rgba(153,255,153,1) 60%) !important;
+    }
+    &.yellow {
+        background: linear-gradient(to bottom, transparent 60%, rgba(255,255,153,1) 60%) !important;
+    }
+}
