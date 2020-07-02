@@ -1,0 +1,4 @@
+env: "production"
+docs_file: "affily-docs.min"
+url: "https://kawasima.github.io/affily"
+exclude: ['node_modules', 'affily-docs.scss','docker-compose.yml', 'package.json', '.#*']

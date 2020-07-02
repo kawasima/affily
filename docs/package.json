@@ -1,0 +1,20 @@
+{
+  "name": "affily-docs",
+  "version": "0.1.0",
+  "main": "index.html",
+  "author": "Yoshitaka Kawashima <kawasima1016@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "css-build": "npm run css-scss && npm run css-autoprefix && npm run css-cleancss",
+    "css-autoprefix": "postcss --use autoprefixer --map false --output css/affily-docs.css css/affily-docs.css",
+    "css-cleancss": "cleancss -o css/affily-docs.min.css css/affily-docs.css",
+    "css-scss": "node-sass --output-style expanded affily-docs.scss css/affily-docs.css",
+    "css-watch": "npm run css-scss -- --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^7.1.1"
+  }
+}

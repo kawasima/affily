@@ -4,15 +4,20 @@
   "description": "A css framework",
   "main": "index.js",
   "scripts": {
-    "build-sass": "node-sass --output-style expanded --source-map true affily.scss css/affily.css",
-    "watch-sass": "nodemon -e scss -x 'npm run build-sass'",
-    "showcase": "http-server ./"
+    "build": "npm run build-scss && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/affily.css css/affily.css",
+    "build-cleancss": "cleancss -o css/affily.min.css css/affily.css",
+    "build-scss": "node-sass --output-style expanded affily.scss css/affily.css",
+    "clean": "rimraf css",
+    "start": "npm run build-scss -- --watch"
   },
   "author": "kawasima",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^0.12.3",
+    "autoprefixer": "^9.8.4",
+    "clean-css-cli": "^4.3.0",
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.4"
+    "postcss-cli": "^7.1.1",
+    "rimraf": "^3.0.2"
   }
 }

@@ -1,69 +1,79 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>Affily CSS Framework</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.css" type="text/css" />
-    <link rel="stylesheet" href="css/affily.css" type="text/css" />
-  </head>
-  <body>
-    <section class="section">
-      <div class="container">
-        <h3 class="title">Highlighter</h3>
-        <div>
-          <span class="highlighter">これはとっても重要なことです。</span>
-        </div>
-        <div>
-          <span class="highlighter green">これもまた重要です。</span>
-        </div>
-        <div>
-          <span class="highlighter yellow">きっと重要なことにちがいありません</span>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <h3 class="title">Balloon Message</div>
-          <div class="balloon-message left">
-            <img class="avatar" src="https://3.bp.blogspot.com/-1LXBe86Lrs8/Vf-artgLU6I/AAAAAAAAyJE/i5zNuMDWXWo/s800/icon_business_man13.png" />
-            <div class="text">あいづちを10パターンくらいマスターしたんだ。</div>
-          </div>
-          <div class="balloon-message right">
-            <img class="avatar" src="https://3.bp.blogspot.com/-ZtTMnGSjfzk/VaMOAsBo5FI/AAAAAAAAvhc/9TSiB9xAAx4/s800/youngwoman_44.png" />
-            <div class="text">なるほどですね。仕事ができるように見えますね</div>
-          </div>
-      </div>
-    </section>
-    </body>
-</html>
-    <section class="section">
-      <div class="container">
-        <h3 class="title">Ranking</h3>
-        <div class="rank-panel" style="max-width: 600px;">
-          <div class="badge">第1位</div>
-          <div class="columns">
-            <div class="column">
-              <img src="https://1.bp.blogspot.com/-jlZlCg-8FAM/Xub_u8HTD1I/AAAAAAABZis/ZhUI05AZBEQpVinedZ6Xy-eIucmNuY2SQCNcBGAsYHQ/s1600/pose_pien_uruuru_man.png" width="200"/>
-            </div>
-            <div class="column">
-              <h4>ぴえん</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+---
+layout: default
+route: showcase
+---
+{% capture highlighter_example %}
+<section class="section">
+  <div class="container">
+    <h3 class="title">Highlighter</h3>
+    <div>
+      <span class="highlighter">これはとっても重要なことです。</span>
+    </div>
+    <div>
+      <span class="highlighter green">これもまた重要です。</span>
+    </div>
+    <div>
+      <span class="highlighter yellow">きっと重要なことにちがいありません</span>
+    </div>
+  </div>
+</section>
+{% endcapture %}
 
-    <section class="section">
-      <div class="container">
-        <h3 class="title">TL;DR</h3>
-        <div class="tldr" style="max-width: 700px;">
-          <div class="title">仕事ができる人が使うビジネス用語3選</div>
-          <div class="content">
-            <ul>
-              <li>ケースバイケースですね</li>
-              <li>出来ないかといえば嘘になる</li>
-              <li>GAFAに勝てますね</li>
-            </ul>
-          </div>
+{% capture balloon_example %}
+<section class="section">
+  <div class="container">
+    <h3 class="title">Balloon Message</h3>
+    <div class="balloon-message left">
+      <img class="avatar" src="https://3.bp.blogspot.com/-1LXBe86Lrs8/Vf-artgLU6I/AAAAAAAAyJE/i5zNuMDWXWo/s800/icon_business_man13.png" />
+      <div class="text">あいづちを10パターンくらいマスターしたんだ。</div>
+    </div>
+    <div class="balloon-message right">
+      <img class="avatar" src="https://3.bp.blogspot.com/-ZtTMnGSjfzk/VaMOAsBo5FI/AAAAAAAAvhc/9TSiB9xAAx4/s800/youngwoman_44.png" />
+      <div class="text">なるほどですね。仕事ができるように見えますね</div>
+    </div>
+  </div>
+</section>
+{% endcapture %}
+
+{% capture ranking_example %}
+<section class="section">
+  <div class="container">
+    <h3 class="title">Ranking</h3>
+    <div class="rank-panel" style="max-width: 600px;">
+      <div class="badge">第1位</div>
+      <div class="columns">
+        <div class="column">
+          <img src="https://1.bp.blogspot.com/-jlZlCg-8FAM/Xub_u8HTD1I/AAAAAAABZis/ZhUI05AZBEQpVinedZ6Xy-eIucmNuY2SQCNcBGAsYHQ/s1600/pose_pien_uruuru_man.png" width="200"/>
+        </div>
+        <div class="column">
+          <h4>ぴえん</h4>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+{% endcapture %}
+
+{% capture tldr_example %}
+<section class="section">
+  <div class="container">
+    <h3 class="title">TL;DR</h3>
+    <div class="tldr" style="max-width: 700px;">
+      <div class="title">仕事ができる人が使うビジネス用語3選</div>
+      <div class="content">
+        <ul>
+          <li>ケースバイケースですね</li>
+          <li>出来ないかといえば嘘になる</li>
+          <li>GAFAに勝てますね</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endcapture %}
+
+
+{% include elements/snippet.html content=highlighter_example horizontal=true clipped=true %}
+{% include elements/snippet.html content=balloon_example horizontal=true clipped=true %}
+{% include elements/snippet.html content=ranking_example horizontal=true clipped=true %}
+{% include elements/snippet.html content=tldr_example horizontal=true clipped=true %}
