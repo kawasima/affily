@@ -30,7 +30,10 @@
         display: flex;
     }
 
-    &.ad-is-vertical {
+}
+
+@media screen and (min-width: $desktop) {
+    .ad-snippet.ad-is-vertical {
         align-items: stretch;
         border-radius: 2px;
         border-top-left-radius: 0;
@@ -39,7 +42,6 @@
         .ad-snippet-preview,.ad-snippet-code {
             width: 50%;
         }
-
     }
 }
 

@@ -266,16 +266,17 @@
   display: flex;
 }
 
-.ad-snippet.ad-is-vertical {
-  align-items: stretch;
-  border-radius: 2px;
-  border-top-left-radius: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.ad-snippet.ad-is-vertical .ad-snippet-preview, .ad-snippet.ad-is-vertical .ad-snippet-code {
-  width: 50%;
+@media screen and (min-width: 1024px) {
+  .ad-snippet.ad-is-vertical {
+    align-items: stretch;
+    border-radius: 2px;
+    border-top-left-radius: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .ad-snippet.ad-is-vertical .ad-snippet-preview, .ad-snippet.ad-is-vertical .ad-snippet-code {
+    width: 50%;
+  }
 }
 
 .ad-snippet-preview {
