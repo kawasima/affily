@@ -1,0 +1,48 @@
+.af-heading {
+    &__ribbon {
+        position: relative;
+        padding: 0.5em;
+        margin-bottom: 20px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 100%;
+            left: 0;
+            border: none;
+            border-bottom: solid 15px transparent;
+            border-right: solid 20px rgb(149, 158, 155);
+        }
+
+        &.-color-green {
+            color: $white;
+            background-color: $green;
+        }
+    }
+
+    &__underline {
+        color: $black;
+        border-bottom-with: 3px;
+        border-bottom-style: solid;
+        border-bottom-color: $blue;
+
+        &.-color-green {
+            border-bottom-color: $green;
+        }
+    }
+
+    &__leftline {
+        padding: 0.25rem 0.5rem;
+        color: $black;
+        background: transparent;
+        border-left-style: solid;
+        border-left-width: 5px;
+        border-left-color: $blue;
+
+        &.-color-green {
+            border-left-color: $green;
+        }
+
+    }
+
+}

@@ -1,2 +1,3 @@
 env: "development"
+docs_file: "affily-docs"
 url: "http://localhost:4000"

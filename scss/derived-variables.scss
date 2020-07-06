@@ -1,1 +1,14 @@
-$scheme-main: $white;
+// Invert colors
+
+$orange-invert   : findColorInvert($orange) !default;
+$yellow-invert   : findColorInvert($yellow) !default;
+$green-invert    : findColorInvert($green) !default;
+$turquoise-invert: findColorInvert($turquoise) !default;
+$cyan-invert     : findColorInvert($cyan) !default;
+$blue-invert     : findColorInvert($blue) !default;
+$purple-invert   : findColorInvert($purple) !default;
+$red-invert      : findColorInvert($red) !default;
+
+$scheme-main: $white !default;
+
+$background: $white-ter !default;

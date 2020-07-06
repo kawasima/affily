@@ -1,0 +1,48 @@
+.ad-example,
+.ad-snippet {
+    border: 2px solid $background;
+    position: relative;
+    &::before {
+        background: $yellow;
+        bottom: 100%;
+        color: $yellow-invert;
+        content: "Example";
+        display: inline-block;
+        font-size: 7px;
+        font-weight: bold;
+        left: -1px;
+        letter-spacing: 1px;
+        margin-left: -1px;
+        padding: 3px 5px;
+        position: absolute;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+}
+
+.ad-snippet {
+    margin-top: 2rem;
+    position: relative;
+
+    &::before {
+        content: "Snippet";
+        align-items: stretch;
+        display: flex;
+    }
+
+    &.ad-is-vertical {
+        align-items: stretch;
+        border-radius: 2px;
+        border-top-left-radius: 0;
+        display:flex;
+        justify-content:center;
+        .ad-snippet-preview,.ad-snippet-code {
+            width: 50%;
+        }
+
+    }
+}
+
+.ad-snippet-preview {
+    padding: 1.5rem;
+}

@@ -1,45 +1,42 @@
 $balloon-background-color: $scheme-main !default;
 
-.balloon-message {
+.af-balloon {
     margin-bottom: 2rem;
     flex-direction: row;
     display: flex;
 
-    &.left {
-        .text:before {
+    &.-side-left {
+        .af-balloon__text:before {
             left: -20px;
             border-right: 10px solid rgba(0,0,0,.2);
         }
-        .text:after {
+        .af-balloon__text:after {
             left: -18px;
             border-right: 10px solid #fff;
         }
     }
 
-    &.right {
-        .text:before {
+    &.-side-right {
+        .af-balloon__text:before {
             right: -20px;
             border-left: 10px solid rgba(0,0,0,.2);
         }
-        .text:after {
+        .af-balloon__text:after {
             right: -18px;
             border-left: 10px solid #fff;
         }
-        .avatar {
+        .af-balloon__avatar {
             margin-left: 20px;
             order: 2;
         }
     }
-    .avatar {
+    .af-balloon__avatar {
         position: relative;
         width: 64px;
         height: 64px;
         flex-shrink: 0;
     }
-    .avatar.right {
-        float: right;
-    }
-    .text {
+    .af-balloon__text {
         position: relative;
         border-radius: 5px;
         padding: 20px 30px;
@@ -47,14 +44,14 @@ $balloon-background-color: $scheme-main !default;
         margin-left: 20px;
         border: 1px solid rgba(0,0,0,0.2);
     }
-    .text:before {
+    .af-balloon__text:before {
         content: "";
         position:absolute;
         top: 50%;
         margin-top: -10px;
         border: 10px solid transparent;
     }
-    .text:after {
+    .af-balloon__text:after {
         border: 10px solid transparent;
         content: "";
         position: absolute;
