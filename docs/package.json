@@ -1,6 +1,7 @@
 {
   "name": "affily-docs",
   "version": "0.1.0",
+  "private": true,
   "main": "index.html",
   "author": "Yoshitaka Kawashima <kawasima1016@gmail.com>",
   "license": "MIT",

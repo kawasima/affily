@@ -1,7 +1,15 @@
 {
   "name": "affily",
   "version": "0.1.0",
-  "description": "A css framework",
+  "description": "A css framework for making a typical affiliate site.",
+  "homepage": "https://kawasima.github.io/affily",
+  "keywords": ["css"],
+  "author": "kawasima",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kawasima/affily.git"
+  },
   "main": "index.js",
   "scripts": {
     "build": "npm run build-scss && npm run build-autoprefix && npm run build-cleancss",
@@ -11,8 +19,6 @@
     "clean": "rimraf css",
     "start": "npm run build-scss -- --watch"
   },
-  "author": "kawasima",
-  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.8.4",
     "clean-css-cli": "^4.3.0",
